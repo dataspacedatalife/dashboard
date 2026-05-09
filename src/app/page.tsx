@@ -128,16 +128,18 @@ const lifecycleCapabilities = capabilities.filter(
 const outerLifecycleCapabilities = lifecycleCapabilities.filter(
   (capability) => capability.position !== "center",
 );
-const menuOrder: CapabilityKey[] = [
+const lifecycleMenuOrder: CapabilityKey[] = [
   "SHARE",
   "STORE",
   "ANALYZE",
   "COMPUTE",
   "DELIVER",
-  "ANONYMIX",
-  "CLEVER",
 ];
-const menuCapabilities = menuOrder
+const toolMenuOrder: CapabilityKey[] = ["ANONYMIX", "CLEVER"];
+const lifecycleMenuCapabilities = lifecycleMenuOrder
+  .map((key) => capabilities.find((capability) => capability.key === key))
+  .filter((capability): capability is Capability => Boolean(capability));
+const toolMenuCapabilities = toolMenuOrder
   .map((key) => capabilities.find((capability) => capability.key === key))
   .filter((capability): capability is Capability => Boolean(capability));
 
@@ -232,27 +234,20 @@ export default function Home() {
         </div>
 
         <nav className="menu-options" aria-label="Capability options">
-          {menuCapabilities.map((capability) => {
-            const Icon = capability.Icon;
-
-            return (
-              <button
-                key={capability.key}
-                type="button"
-                className="menu-option"
-                aria-pressed={selectedKey === capability.key}
-                aria-label={capability.title}
-                title={menuCollapsed ? capability.title : undefined}
-                onClick={() => handleSelect(capability.key)}
-                style={{ "--accent": capability.accent } as CSSProperties}
-              >
-                <span className="menu-option-icon" aria-hidden="true">
-                  <Icon size={19} strokeWidth={2.25} />
-                </span>
-                <span className="menu-option-text">{capability.title}</span>
-              </button>
-            );
-          })}
+          <MenuGroup
+            title="Lifecycle"
+            capabilities={lifecycleMenuCapabilities}
+            selectedKey={selectedKey}
+            menuCollapsed={menuCollapsed}
+            onSelect={handleSelect}
+          />
+          <MenuGroup
+            title="Tools"
+            capabilities={toolMenuCapabilities}
+            selectedKey={selectedKey}
+            menuCollapsed={menuCollapsed}
+            onSelect={handleSelect}
+          />
         </nav>
       </aside>
 
@@ -354,6 +349,49 @@ export default function Home() {
         </div>
       </section>
     </main>
+  );
+}
+
+function MenuGroup({
+  title,
+  capabilities,
+  selectedKey,
+  menuCollapsed,
+  onSelect,
+}: {
+  title: string;
+  capabilities: Capability[];
+  selectedKey: CapabilityKey | null;
+  menuCollapsed: boolean;
+  onSelect: (key: CapabilityKey) => void;
+}) {
+  return (
+    <div className="menu-group">
+      <p className="menu-group-label">{title}</p>
+      <div className="menu-group-options">
+        {capabilities.map((capability) => {
+          const Icon = capability.Icon;
+
+          return (
+            <button
+              key={capability.key}
+              type="button"
+              className="menu-option"
+              aria-pressed={selectedKey === capability.key}
+              aria-label={capability.title}
+              title={menuCollapsed ? `${title}: ${capability.title}` : undefined}
+              onClick={() => onSelect(capability.key)}
+              style={{ "--accent": capability.accent } as CSSProperties}
+            >
+              <span className="menu-option-icon" aria-hidden="true">
+                <Icon size={19} strokeWidth={2.25} />
+              </span>
+              <span className="menu-option-text">{capability.title}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

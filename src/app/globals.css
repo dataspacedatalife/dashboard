@@ -141,6 +141,26 @@ p {
 
 .menu-options {
   display: grid;
+  gap: 0.9rem;
+}
+
+.menu-group {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.menu-group-label {
+  color: #5f7487;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  padding: 0 0.55rem;
+  text-transform: uppercase;
+}
+
+.menu-group-options {
+  display: grid;
   gap: 0.35rem;
 }
 
@@ -213,6 +233,7 @@ p {
 }
 
 .dashboard-shell[data-menu-collapsed="true"] .side-menu-header > span,
+.dashboard-shell[data-menu-collapsed="true"] .menu-group-label,
 .dashboard-shell[data-menu-collapsed="true"] .menu-option-text {
   display: none;
 }

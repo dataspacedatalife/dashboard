@@ -128,6 +128,18 @@ const lifecycleCapabilities = capabilities.filter(
 const outerLifecycleCapabilities = lifecycleCapabilities.filter(
   (capability) => capability.position !== "center",
 );
+const menuOrder: CapabilityKey[] = [
+  "SHARE",
+  "STORE",
+  "ANALYZE",
+  "COMPUTE",
+  "DELIVER",
+  "ANONYMIX",
+  "CLEVER",
+];
+const menuCapabilities = menuOrder
+  .map((key) => capabilities.find((capability) => capability.key === key))
+  .filter((capability): capability is Capability => Boolean(capability));
 
 export default function Home() {
   const [selectedKey, setSelectedKey] = useState<CapabilityKey | null>(null);
@@ -220,7 +232,7 @@ export default function Home() {
         </div>
 
         <nav className="menu-options" aria-label="Capability options">
-          {capabilities.map((capability) => {
+          {menuCapabilities.map((capability) => {
             const Icon = capability.Icon;
 
             return (
@@ -333,8 +345,8 @@ export default function Home() {
                   A complete operational lifecycle for One Health data.
                 </p>
                 <p>
-                  Select a service on the left to view its role in the
-                  lifecycle and open its operational endpoint.
+                  Select a service in the lifecycle to get more information and
+                  open its operational endpoint.
                 </p>
               </div>
             )}

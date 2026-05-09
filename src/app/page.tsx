@@ -143,7 +143,7 @@ const menuCapabilities = menuOrder
 
 export default function Home() {
   const [selectedKey, setSelectedKey] = useState<CapabilityKey | null>(null);
-  const [menuCollapsed, setMenuCollapsed] = useState(true);
+  const [menuCollapsed, setMenuCollapsed] = useState(false);
   const detailPanelRef = useRef<HTMLElement>(null);
   const selectedCapability = capabilities.find(
     (capability) => capability.key === selectedKey,

@@ -181,6 +181,26 @@ export default function Home() {
       ) : null}
 
       <aside className="side-menu" aria-label="OneHealth DataSpace menu">
+        <div className="side-menu-brand" aria-label="OneHealth DataSpace">
+          <Image
+            src="/logo.png"
+            alt=""
+            width={150}
+            height={78}
+            priority
+            className="side-menu-logo-full"
+          />
+          <Image
+            src="/share-icon.ico"
+            alt=""
+            width={34}
+            height={34}
+            priority
+            unoptimized
+            className="side-menu-logo-mark"
+          />
+        </div>
+
         <div className="side-menu-header">
           <Menu size={20} aria-hidden="true" />
           <span>Menu</span>
@@ -225,26 +245,9 @@ export default function Home() {
       </aside>
 
       <section className="dashboard-page" aria-labelledby="dashboard-title">
-        <header className="hero-header">
-          <div className="brand-mark">
-            <Image
-              src="/logo.png"
-              alt="OneHealth DataSpace logo"
-              width={180}
-              height={94}
-              priority
-              className="brand-logo"
-            />
-          </div>
-
-          <div className="hero-copy">
-            <h1 id="dashboard-title">
-              <span>MORE THAN</span>
-              <span>DATA</span>
-            </h1>
-            <p>A complete operational lifecycle for One Health data.</p>
-          </div>
-        </header>
+        <h1 id="dashboard-title" className="sr-only">
+          OneHealth DataSpace operational dashboard
+        </h1>
 
         <div className="dashboard-grid">
           <section

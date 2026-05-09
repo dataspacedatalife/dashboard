@@ -316,7 +316,7 @@ p {
       transparent 322deg 360deg
     );
   mask: radial-gradient(circle, transparent 56%, #000 57.4% 62.4%, transparent 63.6%);
-  animation: lifecycle-flow 7.5s linear infinite;
+  animation: lifecycle-flow 3.5s linear infinite;
 }
 
 .lifecycle-map[data-selected] .cycle-ring::before {
@@ -325,7 +325,7 @@ p {
 
 @keyframes lifecycle-flow {
   to {
-    transform: rotate(1turn);
+    transform: rotate(-1turn);
   }
 }
 

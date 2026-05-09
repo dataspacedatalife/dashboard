@@ -539,6 +539,10 @@ p {
   line-height: 0.95;
 }
 
+.detail-panel h2 span {
+  display: block;
+}
+
 .detail-panel p {
   color: var(--muted);
   line-height: 1.55;
@@ -556,6 +560,26 @@ p {
   color: #334b61;
   font-size: 0.9rem;
   padding: 0.65rem 0.75rem;
+}
+
+.panel-empty-state {
+  display: grid;
+  gap: 0.9rem;
+  min-height: 22rem;
+  align-content: center;
+}
+
+.panel-empty-state h2 {
+  color: #123d7d;
+  font-size: clamp(2.05rem, 4.6vw, 3.5rem);
+}
+
+.panel-empty-state h2 span:first-child {
+  color: #0798ad;
+}
+
+.panel-empty-state h2 span:last-child {
+  color: #123d7d;
 }
 
 .service-link {

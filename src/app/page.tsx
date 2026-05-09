@@ -128,12 +128,12 @@ const outerLifecycleCapabilities = lifecycleCapabilities.filter(
 );
 
 export default function Home() {
-  const [selectedKey, setSelectedKey] = useState<CapabilityKey>("SHARE");
+  const [selectedKey, setSelectedKey] = useState<CapabilityKey | null>(null);
   const [menuCollapsed, setMenuCollapsed] = useState(true);
   const detailPanelRef = useRef<HTMLElement>(null);
-  const selectedCapability =
-    capabilities.find((capability) => capability.key === selectedKey) ??
-    capabilities[0];
+  const selectedCapability = capabilities.find(
+    (capability) => capability.key === selectedKey,
+  );
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 900px)");
@@ -153,9 +153,10 @@ export default function Home() {
   }, []);
 
   function handleSelect(key: CapabilityKey) {
-    setSelectedKey(key);
+    const nextSelectedKey = selectedKey === key ? null : key;
+    setSelectedKey(nextSelectedKey);
 
-    if (window.matchMedia("(max-width: 1040px)").matches) {
+    if (nextSelectedKey && window.matchMedia("(max-width: 1040px)").matches) {
       requestAnimationFrame(() => {
         detailPanelRef.current?.scrollIntoView({
           behavior: "smooth",
@@ -272,34 +273,61 @@ export default function Home() {
             aria-labelledby="selected-service-title"
             aria-live="polite"
             tabIndex={-1}
-            style={{ "--accent": selectedCapability.accent } as CSSProperties}
+            style={
+              {
+                "--accent": selectedCapability?.accent ?? "#057b86",
+              } as CSSProperties
+            }
           >
-            <div className="panel-status">
-              <p className="eyebrow">Selected service</p>
-              <span>{selectedCapability.url ? "Service" : "Local"}</span>
-            </div>
-            <h2 id="selected-service-title">{selectedCapability.title}</h2>
-            <p className="panel-lead">{selectedCapability.description}</p>
-            <p>{selectedCapability.detail}</p>
-            {selectedCapability.url ? (
+            {selectedCapability ? (
               <>
-                <a
-                  href={selectedCapability.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="service-link"
-                  aria-label={`Open ${
-                    selectedCapability.serviceName ?? selectedCapability.title
-                  } service in a new tab`}
-                >
-                  Open {selectedCapability.serviceName ?? selectedCapability.title} Service
-                  <ExternalLink size={16} strokeWidth={2.4} aria-hidden="true" />
-                </a>
+                <div className="panel-status">
+                  <p className="eyebrow">Selected service</p>
+                  <span>{selectedCapability.url ? "Service" : "Local"}</span>
+                </div>
+                <h2 id="selected-service-title">{selectedCapability.title}</h2>
+                <p className="panel-lead">{selectedCapability.description}</p>
+                <p>{selectedCapability.detail}</p>
+                {selectedCapability.url ? (
+                  <a
+                    href={selectedCapability.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="service-link"
+                    aria-label={`Open ${
+                      selectedCapability.serviceName ?? selectedCapability.title
+                    } service in a new tab`}
+                  >
+                    Open{" "}
+                    {selectedCapability.serviceName ?? selectedCapability.title}{" "}
+                    Service
+                    <ExternalLink
+                      size={16}
+                      strokeWidth={2.4}
+                      aria-hidden="true"
+                    />
+                  </a>
+                ) : (
+                  <p className="panel-note">
+                    This option is shown locally in the dashboard.
+                  </p>
+                )}
               </>
             ) : (
-              <p className="panel-note">
-                This option is shown locally in the dashboard.
-              </p>
+              <div className="panel-empty-state">
+                <p className="eyebrow">OneHealth DataSpace</p>
+                <h2 id="selected-service-title">
+                  <span>MORE THAN</span>
+                  <span>DATA</span>
+                </h2>
+                <p className="panel-lead">
+                  A complete operational lifecycle for One Health data.
+                </p>
+                <p>
+                  Select a service on the left to view its role in the
+                  lifecycle and open its operational endpoint.
+                </p>
+              </div>
             )}
           </aside>
         </div>

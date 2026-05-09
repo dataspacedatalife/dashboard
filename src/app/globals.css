@@ -369,7 +369,7 @@ p {
 .service-node-center {
   top: 50%;
   left: 50%;
-  width: 11.8rem;
+  width: 13.2rem;
   transform: translate(-50%, -50%);
 }
 
@@ -490,7 +490,7 @@ p {
 }
 
 .service-node-center .node-text strong {
-  font-size: 1.35rem;
+  font-size: 1.52rem;
 }
 
 .node-tooltip {
@@ -779,7 +779,7 @@ p {
   }
 
   .service-node-center .node-text strong {
-    font-size: 1rem;
+    font-size: 1.08rem;
   }
 
   .node-tooltip {

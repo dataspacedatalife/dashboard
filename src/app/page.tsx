@@ -269,7 +269,7 @@ export default function Home() {
             style={{ "--accent": selectedCapability.accent } as CSSProperties}
           >
             <div className="panel-status">
-              <p className="eyebrow">Selected option</p>
+              <p className="eyebrow">Selected service</p>
               <span>{selectedCapability.url ? "Service" : "Local"}</span>
             </div>
             <h2 id="selected-service-title">{selectedCapability.title}</h2>
@@ -285,7 +285,7 @@ export default function Home() {
                   className="service-link"
                   aria-label={`Open ${selectedCapability.title} service in a new tab`}
                 >
-                  Open {selectedCapability.title}
+                  Open {selectedCapability.title} Service
                   <ExternalLink size={16} strokeWidth={2.4} aria-hidden="true" />
                 </a>
               </>

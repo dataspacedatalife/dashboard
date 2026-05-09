@@ -44,9 +44,9 @@ const capabilities: Capability[] = [
   {
     key: "SHARE",
     title: "SHARE",
-    description: "Connect data, people, and organizations",
+    description: "Securely share data with other participants",
     detail:
-      "Use the sharing service as the trusted entry point for exchanging One Health data across partners.",
+      "Use the sharing service for exchanging One Health data with other Data Space participants in a interoperable and trusted way using EDC connectors",
     url: "https://xdatashare.srv.cesga.es",
     serviceName: "XDATASHARE",
     accent: "#0b5fd3",
@@ -59,7 +59,7 @@ const capabilities: Capability[] = [
     title: "COMPUTE",
     description: "Use advanced computing capabilities",
     detail:
-      "Run scalable processing, AI, simulation, and workflow workloads close to governed data.",
+      "Run scalable processing, AI, simulation, and workflow workloads close to governed data",
     url: "https://hpc.dataspace.cesga.es",
     serviceName: "HPC",
     accent: "#1557c0",
@@ -71,7 +71,7 @@ const capabilities: Capability[] = [
     title: "ANALYZE",
     description: "Turn data into knowledge",
     detail:
-      "Explore datasets, build models, and transform operational data into useful insight.",
+      "Explore datasets, analyze data, and transform operational data into useful insight using Big Data technologies",
     url: "https://bigdata.dataspace.cesga.es",
     serviceName: "BIG DATA",
     accent: "#057b86",
@@ -81,9 +81,9 @@ const capabilities: Capability[] = [
   {
     key: "STORE",
     title: "STORE",
-    description: "Manage and protect data assets",
+    description: "Store and protect your data assets safe in scalable high-performance storage",
     detail:
-      "Keep source data, derived outputs, and project assets in secure, durable storage.",
+      "Keep your source data, derived outputs, and other project assets safe in high-performance, durable storage",
     url: "https://store.dataspace.cesga.es",
     serviceName: "STORAGE",
     accent: "#6e3fb2",
@@ -95,7 +95,7 @@ const capabilities: Capability[] = [
     title: "DELIVER",
     description: "Expose results as services and applications",
     detail:
-      "Publish validated outputs through cloud services, applications, and operational endpoints.",
+      "Publish applications and service endpoints through private cloud services under your control",
     url: "https://cloud.srv.cesga.es",
     serviceName: "CLOUD",
     accent: "#2f8d24",
@@ -107,7 +107,7 @@ const capabilities: Capability[] = [
     title: "Anonymix",
     description: "Prepare privacy-preserving datasets",
     detail:
-      "Support controlled anonymization workflows before sensitive data is shared, analyzed, or delivered.",
+      "Support controlled anonymization workflows before sensitive data is shared, analyzed, or delivered",
     accent: "#087f8c",
     Icon: ShieldCheck,
   },
@@ -116,7 +116,7 @@ const capabilities: Capability[] = [
     title: "Clever",
     description: "Coordinate intelligent operational assistance",
     detail:
-      "Provide guided support for finding services, understanding next steps, and coordinating lifecycle actions.",
+      "Provide guided support for finding services, understanding next steps, and coordinating lifecycle actions",
     accent: "#0f766e",
     Icon: BrainCircuit,
   },
@@ -337,7 +337,7 @@ export default function Home() {
                   <span>DATA</span>
                 </h2>
                 <p className="panel-lead">
-                  A complete operational lifecycle for One Health data.
+                  A complete operational lifecycle for One Health data
                 </p>
                 <p>
                   Select a service to view its role in the lifecycle and access

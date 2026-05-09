@@ -1,143 +1,125 @@
 # OneHealth DataSpace Dashboard
 
-## Design
-Create a clean, modern landing page design for the **OneHealth DataSpace dashboard**, using the attached circular lifecycle diagram as the visual reference.
+Public-facing operational dashboard for the OneHealth DataSpace (OHDS). The application should present the OHDS service lifecycle as a clear, clickable interface that routes users to the main platform services.
 
-The page should be visually appealing, simple, and easy to understand. It should feel like an operational dashboard, not a scientific poster.
+## Project Purpose
 
-### Main concept
+Build a polished OneHealth DataSpace dashboard that communicates a complete operational lifecycle for One Health data:
 
-Keep the circular lifecycle structure from the reference image, but simplify it for use as a web landing page.
+- Share trusted and interoperable data.
+- Run scalable compute and AI workflows.
+- Analyze data into useful insights.
+- Store data securely and at scale.
+- Deliver results as services and applications.
 
-The dashboard should show **five main clickable areas**:
+The result should feel like an institutional operational dashboard for research, health data, HPC, AI, and data spaces. It should not feel like a scientific poster, static presentation slide, or generic marketing landing page.
 
-1. **SHARE** in the center
-2. **COMPUTE** at the top
-3. **ANALYZE** on the right
-4. **STORE** at the bottom
-5. **DELIVER** on the left
+## Current State
 
-Each area should look like a clear, clickable button or card.
+This repository is currently a clean Next.js project prepared for implementation:
 
-### Layout
+- `src/app` is intentionally empty and should be rebuilt during implementation.
+- Project assets are prepared in `public/`.
+- `mockups/ohds_diagram-v2.png` is available as the visual reference for the dashboard concept.
+- The starter SVG assets have been removed and should not be restored.
 
-Use a centered circular layout.
+## Required Design
 
-In the center, create a large circular button for:
+Create a simplified lifecycle dashboard based on `mockups/ohds_diagram-v2.png`.
 
-**SHARE**
+The dashboard must show five main clickable lifecycle areas:
 
-Inside this central circle, include the **official OneHealth DataSpace logo** as the main visual element. Use a clean placeholder if the official logo is not available, but leave enough space for the real logo to be inserted later.
+- `SHARE` in the center.
+- `COMPUTE` at the top.
+- `ANALYZE` on the right.
+- `STORE` at the bottom.
+- `DELIVER` on the left.
 
-Below or inside the central area, include a short supporting phrase:
+Use a centered circular layout on desktop. `SHARE` should be the primary central action and should include the official OneHealth DataSpace logo.
 
-**Secure, trusted, interoperable data sharing**
+Use subtle lifecycle arrows or visual flow between `COMPUTE`, `ANALYZE`, `STORE`, and `DELIVER`. Keep the design clean, spacious, and easy to understand within a few seconds.
 
-Around the central SHARE button, place four circular buttons:
+Do not recreate the dense reference diagram. Remove the outer dotted governance ring, small internal icons, and heavy text density from the mockup. Preserve only the main lifecycle idea and the five actions.
 
-* Top: **COMPUTE**
-* Right: **ANALYZE**
-* Bottom: **STORE**
-* Left: **DELIVER**
+## Required Copy
 
-Each outer button should include:
+The slogan area must use this copy exactly:
 
-* A simple icon
-* The capitalized label
-* A very short subtitle
+```text
+MORE THAN DATA
+A complete operational lifecycle for One Health data.
+```
 
-Use these subtitles:
+Fix the typo from the reference image. The slogan must be `MORE THAN DATA`, not `MORE THANT DATA`.
 
-**COMPUTE**
-Run scalable AI and computing workflows
+Suggested supporting text for the central action:
 
-**ANALYZE**
-Transform data into insights
+```text
+Secure, trusted, interoperable data sharing
+```
 
-**STORE**
-Store data securely and at scale
+Suggested short subtitles for the outer lifecycle actions:
 
-**DELIVER**
-Expose results as services and applications
+- `COMPUTE`: Run scalable AI and computing workflows
+- `ANALYZE`: Transform data into insights
+- `STORE`: Store data securely and at scale
+- `DELIVER`: Expose results as services and applications
 
-### Simplifications from the original diagram
+## Required Interactions
 
-Remove the outer dotted **Governance & Trust** ring completely.
+Each of the five lifecycle areas must be clearly clickable.
 
-Remove small internal icons such as “Share”, “Get Data”, “Federate”, and “Access Control” from the central circle.
+- Clicking a lifecycle area should open a local detail side panel or equivalent local detail view.
+- The detail panel should include the relevant external service link.
+- External service links must open in a new browser tab.
+- Links and buttons must be accessible through keyboard navigation.
 
-Reduce text density.
+## Service URLs
 
-Keep only the main lifecycle idea and the five main actions.
+Use these URLs for the external service links:
 
-The circular arrows can remain, but they should be subtle and elegant. They should suggest a lifecycle without making the design visually heavy. Use a smooth circular flow connecting Compute, Analyze, Store, and Deliver.
+| Area | URL |
+| --- | --- |
+| `SHARE` | `https://xdatashare.srv.cesga.es` |
+| `STORE` | `https://store.dataspace.cesga.es` |
+| `COMPUTE` | `https://hpc.dataspace.cesga.es` |
+| `ANALYZE` | `https://bigdata.dataspace.cesga.es` |
+| `DELIVER` | `https://cloud.srv.cesga.es` |
 
-### Title / slogan area
+## Responsive Requirements
 
-At the bottom of the page, include the slogan:
+Desktop should use the circular lifecycle layout:
 
-**MORE THAN DATA**
+- `SHARE` centered.
+- `COMPUTE`, `ANALYZE`, `STORE`, and `DELIVER` arranged around it.
+- Subtle flow indicators should connect the outer lifecycle actions.
 
-Use a strong but clean typographic treatment.
+Tablet and mobile layouts should adapt into a stacked or grid layout:
 
-Below it, use this subtitle exactly:
+- `SHARE` first.
+- `COMPUTE`, `ANALYZE`, `STORE`, and `DELIVER` shown as stacked cards or a `2x2` grid where space allows.
+- Slogan area at the bottom.
+- No text overlap, clipped labels, or unusable touch targets.
 
-**A complete operational lifecycle for One Health data.**
+## Assets
 
-Fix the typo from the reference image: it must say **MORE THAN DATA**, not “MORE THANT DATA”.
+Use the prepared assets as follows:
 
-### Visual style
+- `/logo.png`: primary OHDS logo for the dashboard and central `SHARE` action.
+- `/favicon.ico`: favicon and app metadata icon.
+- `mockups/ohds_diagram-v2.png`: visual reference only. Do not render this image as the final dashboard.
+- `/ohds_logo_300px.png`, `/ohds_logo_627px.png`, `/ohds_logo_800px.png`: optional logo variants. Use only if the implementation needs a different size or format.
 
-Use a clean white or very light background.
+Do not delete the mockup or logo variants unless explicitly requested.
 
-Use the color palette inspired by the original diagram:
+## Development
 
-* Deep blue for SHARE and COMPUTE
-* Teal for ANALYZE
-* Purple for STORE
-* Green for DELIVER
+Install dependencies with `pnpm`, then use:
 
-Use gradients subtly, not aggressively.
+```bash
+pnpm dev
+pnpm lint
+pnpm build
+```
 
-Use soft shadows, rounded shapes, and enough whitespace.
-
-The final design should look professional, modern, and suitable for a public-facing institutional platform connected to research, health data, HPC, AI, and data spaces.
-
-### Web usability
-
-The design should clearly communicate that the five areas are clickable.
-
-Each button should be suitable for linking to a different OHDS tool or section.
-
-The page should work as a landing page/dashboard, so the design should be understandable within a few seconds.
-
-Avoid decorative complexity.
-
-Avoid excessive text.
-
-Avoid making it look like a static presentation slide.
-
-### Responsive design guidance
-
-The desktop version should use the circular layout.
-
-For tablet and mobile, the design should be adaptable into a vertical layout:
-
-* SHARE first
-* Then COMPUTE, ANALYZE, STORE, DELIVER as stacked cards or a 2x2 grid
-* Slogan at the bottom
-
-## Links
-
-These are the URLS for the links:
-
-- SHARE: https://xdatashare.srv.cesga.es
-- STORE: https://store.dataspace.cesga.es
-- COMPUTE: https://hpc.dataspace.cesga.es
-- ANALYZE: https://bigdata.dataspace.cesga.es
-- DELIVER: https://cloud.srv.cesga.es
-
-### Output expected
-
-The landing page for the OneHealth DataSpace Dashboard.
-
+`pnpm dev` starts the local Next.js development server. `pnpm lint` and `pnpm build` should pass before implementation work is considered complete.

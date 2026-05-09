@@ -217,7 +217,7 @@ export default function Home() {
 
         <div className="side-menu-header">
           <Menu size={20} aria-hidden="true" />
-          <span>Menu</span>
+          <span>Dashboard</span>
           <button
             type="button"
             className="menu-toggle"

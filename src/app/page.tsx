@@ -249,7 +249,11 @@ export default function Home() {
             className="lifecycle-section"
             aria-label="Choose a OneHealth DataSpace lifecycle capability"
           >
-            <div className="lifecycle-map" aria-label="OneHealth DataSpace lifecycle">
+            <div
+              className="lifecycle-map"
+              aria-label="OneHealth DataSpace lifecycle"
+              data-selected={selectedKey ?? undefined}
+            >
               <div className="cycle-ring" aria-hidden="true" />
               <ServiceButton
                 service={lifecycleCapabilities[0]}
@@ -356,9 +360,6 @@ function ServiceButton({
       onClick={() => onSelect(service.key)}
       style={{ "--accent": service.accent } as CSSProperties}
     >
-      <span className="selected-badge" aria-hidden={!selected}>
-        Selected
-      </span>
       <span className="node-symbol" aria-hidden="true">
         <Icon size={30} strokeWidth={2.25} />
       </span>

@@ -36,6 +36,7 @@ type Capability = {
   serviceName?: string;
   accent: string;
   Icon: LucideIcon;
+  iconSrc?: string;
   position?: "center" | "top" | "right" | "bottom" | "left";
 };
 
@@ -50,6 +51,7 @@ const capabilities: Capability[] = [
     serviceName: "XDATASHARE",
     accent: "#0b5fd3",
     Icon: Share2,
+    iconSrc: "/share-icon.ico",
     position: "center",
   },
   {
@@ -354,14 +356,30 @@ function ServiceButton({
   return (
     <button
       type="button"
-      className={`service-node service-node-${service.position}`}
+      className={`service-node service-node-${service.position}${
+        service.iconSrc ? " service-node-logo" : ""
+      }`}
       aria-pressed={selected}
       aria-label={`${service.title}: ${service.description}`}
       onClick={() => onSelect(service.key)}
       style={{ "--accent": service.accent } as CSSProperties}
     >
-      <span className="node-symbol" aria-hidden="true">
-        <Icon size={30} strokeWidth={2.25} />
+      <span
+        className={`node-symbol${service.iconSrc ? " node-symbol-logo" : ""}`}
+        aria-hidden="true"
+      >
+        {service.iconSrc ? (
+          <Image
+            src={service.iconSrc}
+            alt=""
+            width={44}
+            height={44}
+            className="node-image-icon"
+            unoptimized
+          />
+        ) : (
+          <Icon size={30} strokeWidth={2.25} />
+        )}
       </span>
       <span className="node-text">
         <strong>{service.title}</strong>

@@ -277,7 +277,6 @@ export default function Home() {
             <p>{selectedCapability.detail}</p>
             {selectedCapability.url ? (
               <>
-                <p className="panel-note">The service opens in a new browser tab.</p>
                 <a
                   href={selectedCapability.url}
                   target="_blank"

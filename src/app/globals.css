@@ -282,6 +282,36 @@ p {
   pointer-events: none;
 }
 
+.cycle-ring::before {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    conic-gradient(
+      from 300deg,
+      transparent 0deg 228deg,
+      rgba(255, 255, 255, 0.06) 240deg,
+      rgba(7, 152, 173, 0.44) 270deg,
+      rgba(11, 95, 211, 0.36) 295deg,
+      transparent 322deg 360deg
+    );
+  content: "";
+  mask: radial-gradient(circle, transparent 56%, #000 57.4% 62.4%, transparent 63.6%);
+  animation: lifecycle-flow 7.5s linear infinite;
+}
+
+@keyframes lifecycle-flow {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cycle-ring::before {
+    animation: none;
+  }
+}
+
 .service-node {
   --accent: #0b5fd3;
   position: absolute;

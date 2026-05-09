@@ -33,6 +33,7 @@ type Capability = {
   description: string;
   detail: string;
   url?: string;
+  serviceName?: string;
   accent: string;
   Icon: LucideIcon;
   position?: "center" | "top" | "right" | "bottom" | "left";
@@ -46,6 +47,7 @@ const capabilities: Capability[] = [
     detail:
       "Use the sharing service as the trusted entry point for exchanging One Health data across partners.",
     url: "https://xdatashare.srv.cesga.es",
+    serviceName: "XDATASHARE",
     accent: "#0b5fd3",
     Icon: Share2,
     position: "center",
@@ -57,6 +59,7 @@ const capabilities: Capability[] = [
     detail:
       "Run scalable processing, AI, simulation, and workflow workloads close to governed data.",
     url: "https://hpc.dataspace.cesga.es",
+    serviceName: "HPC",
     accent: "#1557c0",
     Icon: Cpu,
     position: "top",
@@ -68,6 +71,7 @@ const capabilities: Capability[] = [
     detail:
       "Explore datasets, build models, and transform operational data into useful insight.",
     url: "https://bigdata.dataspace.cesga.es",
+    serviceName: "BIG DATA",
     accent: "#057b86",
     Icon: Search,
     position: "right",
@@ -79,6 +83,7 @@ const capabilities: Capability[] = [
     detail:
       "Keep source data, derived outputs, and project assets in secure, durable storage.",
     url: "https://store.dataspace.cesga.es",
+    serviceName: "STORAGE",
     accent: "#6e3fb2",
     Icon: Database,
     position: "bottom",
@@ -90,6 +95,7 @@ const capabilities: Capability[] = [
     detail:
       "Publish validated outputs through cloud services, applications, and operational endpoints.",
     url: "https://cloud.srv.cesga.es",
+    serviceName: "CLOUD",
     accent: "#2f8d24",
     Icon: CloudUpload,
     position: "left",
@@ -282,9 +288,11 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                   className="service-link"
-                  aria-label={`Open ${selectedCapability.title} service in a new tab`}
+                  aria-label={`Open ${
+                    selectedCapability.serviceName ?? selectedCapability.title
+                  } service in a new tab`}
                 >
-                  Open {selectedCapability.title} Service
+                  Open {selectedCapability.serviceName ?? selectedCapability.title} Service
                   <ExternalLink size={16} strokeWidth={2.4} aria-hidden="true" />
                 </a>
               </>

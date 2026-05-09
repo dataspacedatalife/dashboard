@@ -340,8 +340,8 @@ export default function Home() {
                   A complete operational lifecycle for One Health data.
                 </p>
                 <p>
-                  Select a service in the lifecycle to get more information and
-                  open its operational endpoint.
+                  Select a service to view its role in the lifecycle and access
+                  its operational endpoint
                 </p>
               </div>
             )}

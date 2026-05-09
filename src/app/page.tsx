@@ -81,9 +81,9 @@ const capabilities: Capability[] = [
   {
     key: "STORE",
     title: "STORE",
-    description: "Store and protect your data assets safe in scalable high-performance storage",
+    description: "Store and protect your data assets",
     detail:
-      "Keep your source data, derived outputs, and other project assets safe in high-performance, durable storage",
+      "Keep your source data, derived outputs, and other project assets safe in scalable, high-performance, durable storage",
     url: "https://store.dataspace.cesga.es",
     serviceName: "STORAGE",
     accent: "#6e3fb2",

@@ -123,7 +123,7 @@ const outerLifecycleCapabilities = lifecycleCapabilities.filter(
 
 export default function Home() {
   const [selectedKey, setSelectedKey] = useState<CapabilityKey>("SHARE");
-  const [menuCollapsed, setMenuCollapsed] = useState(false);
+  const [menuCollapsed, setMenuCollapsed] = useState(true);
   const detailPanelRef = useRef<HTMLElement>(null);
   const selectedCapability =
     capabilities.find((capability) => capability.key === selectedKey) ??
@@ -133,7 +133,9 @@ export default function Home() {
     const mediaQuery = window.matchMedia("(max-width: 900px)");
 
     function syncMenuState() {
-      setMenuCollapsed(mediaQuery.matches);
+      if (mediaQuery.matches) {
+        setMenuCollapsed(true);
+      }
     }
 
     syncMenuState();

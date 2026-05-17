@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "title": "Panel de OneHealth DataSpace",
+    "description": "Panel operativo del ciclo de vida para los servicios de OneHealth DataSpace."
+  },
+  "dashboard": {
+    "brand": "OneHealth DataSpace",
+    "logoAlt": "Logotipo de OneHealth DataSpace",
+    "pageTitle": "Panel operativo de OneHealth DataSpace",
+    "menu": {
+      "dashboard": "Panel",
+      "lifecycle": "Ciclo de vida",
+      "tools": "Herramientas"
+    },
+    "languages": {
+      "en": "ingles",
+      "es": "espanol",
+      "gl": "gallego"
+    },
+    "aria": {
+      "collapseMenu": "Contraer menu",
+      "expandMenu": "Expandir menu",
+      "mainMenu": "Menu de OneHealth DataSpace",
+      "capabilityOptions": "Opciones de capacidades",
+      "languageMenu": "Opciones de idioma",
+      "switchLanguage": "Cambiar idioma a {language}",
+      "lifecycleSection": "Elija una capacidad del ciclo de vida de OneHealth DataSpace",
+      "lifecycleMap": "Ciclo de vida de OneHealth DataSpace",
+      "openService": "Abrir el servicio {service} en una nueva pestana"
+    },
+    "slogan": {
+      "line1a": "MAS QUE",
+      "line1b": "DATOS",
+      "line2": "Un ciclo de vida operativo completo para datos de One Health."
+    },
+    "panel": {
+      "selectedService": "Servicio seleccionado",
+      "service": "Servicio",
+      "local": "Local",
+      "openService": "Abrir servicio {service}",
+      "localNote": "Esta opcion se muestra localmente en el panel.",
+      "emptyPrompt": "Seleccione un servicio para ver su funcion en el ciclo de vida y acceder a su punto operativo."
+    },
+    "capabilities": {
+      "SHARE": {
+        "title": "SHARE",
+        "description": "Compartir datos de forma segura con otros participantes",
+        "detail": "Use el servicio de comparticion para intercambiar datos de One Health con otros participantes del Data Space de forma interoperable y fiable mediante conectores EDC.",
+        "serviceName": "XDATASHARE"
+      },
+      "COMPUTE": {
+        "title": "COMPUTE",
+        "description": "Usar capacidades avanzadas de computacion",
+        "detail": "Ejecute cargas escalables de procesamiento, IA, simulacion y flujos de trabajo cerca de datos gobernados.",
+        "serviceName": "HPC"
+      },
+      "ANALYZE": {
+        "title": "ANALYZE",
+        "description": "Convertir datos en conocimiento",
+        "detail": "Explore conjuntos de datos, analice informacion y transforme datos operativos en conocimiento util con tecnologias Big Data.",
+        "serviceName": "BIG DATA"
+      },
+      "STORE": {
+        "title": "STORE",
+        "description": "Almacenar y proteger activos de datos",
+        "detail": "Mantenga datos de origen, resultados derivados y otros activos de proyecto seguros en almacenamiento escalable, duradero y de alto rendimiento.",
+        "serviceName": "STORAGE"
+      },
+      "DELIVER": {
+        "title": "DELIVER",
+        "description": "Exponer resultados como servicios y aplicaciones",
+        "detail": "Publique aplicaciones y puntos de servicio mediante servicios de nube privada bajo su control.",
+        "serviceName": "CLOUD"
+      },
+      "ANONYMIX": {
+        "title": "Anonymix",
+        "description": "Preparar conjuntos de datos con preservacion de privacidad",
+        "detail": "Apoye flujos controlados de anonimizacion antes de compartir, analizar o entregar datos sensibles."
+      },
+      "CLEVER": {
+        "title": "Clever",
+        "description": "Coordinar asistencia operativa inteligente",
+        "detail": "Proporcione apoyo guiado para encontrar servicios, entender siguientes pasos y coordinar acciones del ciclo de vida."
+      }
+    }
+  }
+}

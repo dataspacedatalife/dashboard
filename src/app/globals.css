@@ -144,6 +144,33 @@ p {
   gap: 0.9rem;
 }
 
+.language-switcher {
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+  padding-top: 0.8rem;
+}
+
+.language-switcher a {
+  min-height: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  color: var(--muted);
+  display: grid;
+  font-size: 0.74rem;
+  font-weight: 900;
+  place-items: center;
+  text-decoration: none;
+}
+
+.language-switcher a:hover,
+.language-switcher a[aria-current="page"] {
+  border-color: #0798ad;
+  background: rgba(7, 152, 173, 0.08);
+  color: #05727d;
+}
+
 .menu-group {
   display: grid;
   gap: 0.35rem;
@@ -242,6 +269,10 @@ p {
   grid-template-columns: 1fr;
   justify-items: center;
   padding-inline: 0.35rem;
+}
+
+.dashboard-shell[data-menu-collapsed="true"] .language-switcher {
+  grid-template-columns: 1fr;
 }
 
 .dashboard-page {

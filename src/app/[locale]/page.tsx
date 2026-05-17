@@ -248,22 +248,23 @@ export default function Home() {
           />
         </nav>
 
-        <nav className="language-switcher" aria-label={t("aria.languageMenu")}>
-          {routing.locales.map((availableLocale) => (
-            <Link
-              key={availableLocale}
-              href="/"
-              locale={availableLocale}
-              aria-current={availableLocale === locale ? "page" : undefined}
-              aria-label={t("aria.switchLanguage", {
-                language: t(`languages.${availableLocale}`),
-              })}
-            >
-              {languageLabels[availableLocale]}
-            </Link>
-          ))}
-        </nav>
       </aside>
+
+      <nav className="language-switcher" aria-label={t("aria.languageMenu")}>
+        {routing.locales.map((availableLocale) => (
+          <Link
+            key={availableLocale}
+            href="/"
+            locale={availableLocale}
+            aria-current={availableLocale === locale ? "page" : undefined}
+            aria-label={t("aria.switchLanguage", {
+              language: t(`languages.${availableLocale}`),
+            })}
+          >
+            {languageLabels[availableLocale]}
+          </Link>
+        ))}
+      </nav>
 
       <section className="dashboard-page" aria-labelledby="dashboard-title">
         <h1 id="dashboard-title" className="sr-only">

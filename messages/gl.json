@@ -43,31 +43,31 @@
     },
     "capabilities": {
       "SHARE": {
-        "title": "SHARE",
+        "title": "COMPARTIR",
         "description": "Compartir datos de forma segura con outros participantes",
         "detail": "Use o servizo de comparticion para intercambiar datos de One Health con outros participantes do Data Space de forma interoperable e fiable mediante conectores EDC.",
         "serviceName": "XDATASHARE"
       },
       "COMPUTE": {
-        "title": "COMPUTE",
+        "title": "COMPUTAR",
         "description": "Usar capacidades avanzadas de computacion",
         "detail": "Execute cargas escalables de procesamento, IA, simulacion e fluxos de traballo preto de datos gobernados.",
         "serviceName": "HPC"
       },
       "ANALYZE": {
-        "title": "ANALYZE",
+        "title": "ANALIZAR",
         "description": "Converter datos en conecemento",
         "detail": "Explore conxuntos de datos, analice informacion e transforme datos operativos en conecemento util con tecnoloxias Big Data.",
         "serviceName": "BIG DATA"
       },
       "STORE": {
-        "title": "STORE",
+        "title": "GARDAR",
         "description": "Almacenar e protexer activos de datos",
         "detail": "Manteña datos de orixe, resultados derivados e outros activos de proxecto seguros en almacenamento escalable, duradeiro e de alto rendemento.",
         "serviceName": "STORAGE"
       },
       "DELIVER": {
-        "title": "DELIVER",
+        "title": "ENTREGAR",
         "description": "Expoñer resultados como servizos e aplicacions",
         "detail": "Publique aplicacions e puntos de servizo mediante servizos de nube privada baixo o seu control.",
         "serviceName": "CLOUD"

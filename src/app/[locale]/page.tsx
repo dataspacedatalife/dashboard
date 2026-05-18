@@ -71,7 +71,7 @@ const capabilityDefinitions: CapabilityDefinition[] = [
   },
   {
     key: "STORE",
-    url: "https://store.dataspace.cesga.es",
+    url: "https://storage.dataspace.cesga.es",
     accent: "#6e3fb2",
     Icon: Database,
     position: "bottom",

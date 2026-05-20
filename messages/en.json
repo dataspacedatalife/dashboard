@@ -29,9 +29,9 @@
       "openService": "Open {service} service in a new tab"
     },
     "slogan": {
-      "line1a": "MORE THAN",
-      "line1b": "DATA",
-      "line2": "A complete operational lifecycle for One Health data."
+      "line1a": "More than",
+      "line1b": "data",
+      "line2": "A complete operational lifecycle for One Health data"
     },
     "panel": {
       "selectedService": "Selected service",
@@ -39,48 +39,48 @@
       "local": "Local",
       "openService": "Open {service} Service",
       "localNote": "This option is shown locally in the dashboard.",
-      "emptyPrompt": "Select a service to view its role in the lifecycle and access its operational endpoint."
+      "emptyPrompt": "Select a service to explore its role in the lifecycle and access its operational endpoint."
     },
     "capabilities": {
       "SHARE": {
-        "title": "SHARE",
+        "title": "Share",
         "description": "Securely share data with other participants",
-        "detail": "Use the sharing service for exchanging One Health data with other Data Space participants in an interoperable and trusted way using EDC connectors.",
-        "serviceName": "XDATASHARE"
+        "detail": "Exchange One Health data with other Data Space participants in an interoperable and trusted way using EDC connectors.",
+        "serviceName": "EDC connector"
       },
       "COMPUTE": {
-        "title": "COMPUTE",
+        "title": "Compute",
         "description": "Use advanced computing capabilities",
-        "detail": "Run scalable processing, AI, simulation, and workflow workloads close to governed data.",
+        "detail": "Launch HPC workloads through an interactive environment.",
         "serviceName": "HPC"
       },
       "ANALYZE": {
-        "title": "ANALYZE",
+        "title": "Analyze",
         "description": "Turn data into knowledge",
-        "detail": "Explore datasets, analyze data, and transform operational data into useful insight using Big Data technologies.",
-        "serviceName": "BIG DATA"
+        "detail": "Explore and analyze large datasets to transform them into useful insights using Big Data technologies.",
+        "serviceName": "Big Data"
       },
       "STORE": {
-        "title": "STORE",
-        "description": "Store and protect your data assets",
-        "detail": "Keep your source data, derived outputs, and other project assets safe in scalable, high-performance, durable storage.",
-        "serviceName": "STORAGE"
+        "title": "Store",
+        "description": "Store your data assets",
+        "detail": "Keep your source data, derived outputs, and other project data in accesible, high-performance storage.",
+        "serviceName": "Storage"
       },
       "DELIVER": {
-        "title": "DELIVER",
+        "title": "Deliver",
         "description": "Expose results as services and applications",
-        "detail": "Publish applications and service endpoints through private cloud services under your control.",
-        "serviceName": "CLOUD"
+        "detail": "Publish applications and service endpoints through cloud services under your control.",
+        "serviceName": "Cloud"
       },
       "ANONYMIX": {
         "title": "Anonymix",
-        "description": "Prepare privacy-preserving datasets",
-        "detail": "Support controlled anonymization workflows before sensitive data is shared, analyzed, or delivered."
+        "description": "Ensure privacy for sensitive datasets",
+        "detail": "Anonymize sensitive data and assess re-identification risk through controlled workflows before it is shared, analyzed, or distributed."
       },
       "CLEVER": {
         "title": "Clever",
-        "description": "Coordinate intelligent operational assistance",
-        "detail": "Provide guided support for finding services, understanding next steps, and coordinating lifecycle actions."
+        "description": "Visualize and analyze data",
+        "detail": "Explore and monitor data through interactive visualization tools."
       }
     }
   }

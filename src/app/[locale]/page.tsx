@@ -49,7 +49,7 @@ type Capability = CapabilityDefinition & {
 const capabilityDefinitions: CapabilityDefinition[] = [
   {
     key: "SHARE",
-    url: "https://xdatashare.srv.cesga.es",
+    url: "https://dl-cesga.srv.cesga.es",
     accent: "#0b5fd3",
     Icon: Share2,
     iconSrc: "/share-icon.ico",
@@ -78,7 +78,7 @@ const capabilityDefinitions: CapabilityDefinition[] = [
   },
   {
     key: "DELIVER",
-    url: "https://cloud.srv.cesga.es",
+    url: "https://cloud.dataspace.cesga.es",
     accent: "#2f8d24",
     Icon: CloudUpload,
     position: "left",

@@ -67,10 +67,10 @@
         "serviceName": "Storage"
       },
       "DELIVER": {
-        "title": "Entregar",
+        "title": "Expoñer",
         "description": "Expoñer resultados como servizos e aplicacións",
         "detail": "Publique aplicacións e endpoints de servizos a través de servizos Cloud baixo o seu control.",
-        "serviceName": "CLOUD"
+        "serviceName": "Cloud"
       },
       "ANONYMIX": {
         "title": "Anonymix",

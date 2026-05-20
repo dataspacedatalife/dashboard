@@ -13,74 +13,74 @@
       "tools": "Ferramentas"
     },
     "languages": {
-      "en": "ingles",
-      "es": "espanol",
+      "en": "inglés",
+      "es": "español",
       "gl": "galego"
     },
     "aria": {
-      "collapseMenu": "Contraer menu",
-      "expandMenu": "Expandir menu",
-      "mainMenu": "Menu de OneHealth DataSpace",
-      "capabilityOptions": "Opcions de capacidades",
-      "languageMenu": "Opcions de idioma",
+      "collapseMenu": "Contraer menú",
+      "expandMenu": "Expandir menú",
+      "mainMenu": "Menú de OneHealth DataSpace",
+      "capabilityOptions": "Opcións de capacidades",
+      "languageMenu": "Opcións de idioma",
       "switchLanguage": "Cambiar idioma a {language}",
       "lifecycleSection": "Escolla unha capacidade do ciclo de vida de OneHealth DataSpace",
       "lifecycleMap": "Ciclo de vida de OneHealth DataSpace",
-      "openService": "Abrir o servizo {service} nunha nova pestana"
+      "openService": "Abrir o servizo {service} nunha nova lapela"
     },
     "slogan": {
-      "line1a": "MAIS QUE",
-      "line1b": "DATOS",
-      "line2": "Un ciclo de vida operativo completo para datos de One Health."
+      "line1a": "Máis que",
+      "line1b": "datos",
+      "line2": "Un ciclo de vida operativo completo para datos de One Health"
     },
     "panel": {
       "selectedService": "Servizo seleccionado",
       "service": "Servizo",
       "local": "Local",
       "openService": "Abrir servizo {service}",
-      "localNote": "Esta opcion amosase localmente no panel.",
-      "emptyPrompt": "Seleccione un servizo para ver a sua funcion no ciclo de vida e acceder ao seu punto operativo."
+      "localNote": "Esta opcion amósase localmente no panel.",
+      "emptyPrompt": "Seleccione un servizo para ver a súa función no ciclo de vida e acceder ao seu punto operativo."
     },
     "capabilities": {
       "SHARE": {
-        "title": "COMPARTIR",
+        "title": "Compartir",
         "description": "Compartir datos de forma segura con outros participantes",
-        "detail": "Use o servizo de comparticion para intercambiar datos de One Health con outros participantes do Data Space de forma interoperable e fiable mediante conectores EDC.",
-        "serviceName": "XDATASHARE"
+        "detail": "Intercambie datos de One Health con outros participantes do espazo de datos de forma interoperable e confiable mediante conectores EDC.",
+        "serviceName": "conector EDC"
       },
       "COMPUTE": {
-        "title": "COMPUTAR",
-        "description": "Usar capacidades avanzadas de computacion",
-        "detail": "Execute cargas escalables de procesamento, IA, simulacion e fluxos de traballo preto de datos gobernados.",
+        "title": "Computar",
+        "description": "Usar capacidades avanzadas de computación",
+        "detail": "Execute fluxos de traballo de HPC a través dunha contorna interactiva.",
         "serviceName": "HPC"
       },
       "ANALYZE": {
-        "title": "ANALIZAR",
-        "description": "Converter datos en conecemento",
-        "detail": "Explore conxuntos de datos, analice informacion e transforme datos operativos en conecemento util con tecnoloxias Big Data.",
-        "serviceName": "BIG DATA"
+        "title": "Analizar",
+        "description": "Converter datos en coñecemento",
+        "detail": "Explore e analice conxuntos grandes de datos para transformalos en coñecemento útil mediante tecnoloxías Big Data.",
+        "serviceName": "Big Data"
       },
       "STORE": {
-        "title": "GARDAR",
-        "description": "Almacenar e protexer activos de datos",
-        "detail": "Manteña datos de orixe, resultados derivados e outros activos de proxecto seguros en almacenamento escalable, duradeiro e de alto rendemento.",
-        "serviceName": "STORAGE"
+        "title": "Almacenar",
+        "description": "Almacenar activos de datos",
+        "detail": "Manteña datos de orixe, resultados derivados e outros datos de proxecto en almacenamento accesible e de alto rendemento.",
+        "serviceName": "Storage"
       },
       "DELIVER": {
-        "title": "ENTREGAR",
-        "description": "Expoñer resultados como servizos e aplicacions",
-        "detail": "Publique aplicacions e puntos de servizo mediante servizos de nube privada baixo o seu control.",
+        "title": "Entregar",
+        "description": "Expoñer resultados como servizos e aplicacións",
+        "detail": "Publique aplicacións e endpoints de servizos a través de servizos Cloud baixo o seu control.",
         "serviceName": "CLOUD"
       },
       "ANONYMIX": {
         "title": "Anonymix",
-        "description": "Preparar conxuntos de datos con preservacion de privacidade",
-        "detail": "Apoie fluxos controlados de anonimizacion antes de compartir, analizar ou entregar datos sensibles."
+        "description": "Asegurar a privacidade de conxuntos de datos sensibles",
+        "detail": "Anonimice datos sensibles e avalíe o risco de reidentificación mediante fluxos de traballo controlados antes de compartilos, analizalos ou distribuílos."
       },
       "CLEVER": {
         "title": "Clever",
-        "description": "Coordinar asistencia operativa intelixente",
-        "detail": "Proporcione apoio guiado para atopar servizos, entender seguintes pasos e coordinar accions do ciclo de vida."
+        "description": "Visualizar e analizar datos",
+        "detail": "Explore e monitorice datos mediante ferramentas de visualización interactivas."
       }
     }
   }

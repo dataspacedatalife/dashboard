@@ -67,7 +67,7 @@ const capabilityDefinitions: CapabilityDefinition[] = [
     url: "https://bigdata.dataspace.cesga.es",
     accent: "#057b86",
     Icon: Search,
-    position: "right",
+    position: "left",
   },
   {
     key: "STORE",
@@ -81,7 +81,7 @@ const capabilityDefinitions: CapabilityDefinition[] = [
     url: "https://cloud.dataspace.cesga.es",
     accent: "#2f8d24",
     Icon: CloudUpload,
-    position: "left",
+    position: "right",
   },
   {
     key: "ANONYMIX",

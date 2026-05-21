@@ -360,7 +360,7 @@ p {
 
 @keyframes lifecycle-flow {
   to {
-    transform: rotate(-1turn);
+    transform: rotate(1turn);
   }
 }
 

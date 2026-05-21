@@ -85,11 +85,13 @@ const capabilityDefinitions: CapabilityDefinition[] = [
   },
   {
     key: "ANONYMIX",
+    url: "https://anonymix.srv.cesga.es",
     accent: "#087f8c",
     Icon: ShieldCheck,
   },
   {
     key: "CLEVER",
+    url: "https://clever.srv.cesga.es",
     accent: "#0f766e",
     Icon: BrainCircuit,
   },
@@ -314,11 +316,7 @@ export default function Home() {
               <>
                 <div className="panel-status">
                   <p className="eyebrow">{t("panel.selectedService")}</p>
-                  <span>
-                    {selectedCapability.url
-                      ? t("panel.service")
-                      : t("panel.local")}
-                  </span>
+                  <span>{t("panel.service")}</span>
                 </div>
                 <h2 id="selected-service-title">{selectedCapability.title}</h2>
                 <p className="panel-lead">{selectedCapability.description}</p>
@@ -346,9 +344,7 @@ export default function Home() {
                       aria-hidden="true"
                     />
                   </a>
-                ) : (
-                  <p className="panel-note">{t("panel.localNote")}</p>
-                )}
+                ) : null}
               </>
             ) : (
               <div className="panel-empty-state">

@@ -75,12 +75,14 @@
       "ANONYMIX": {
         "title": "Anonymix",
         "description": "Ensure privacy for sensitive datasets",
-        "detail": "Anonymize sensitive data and assess re-identification risk through controlled workflows before it is shared, analyzed, or distributed."
+        "detail": "Anonymize sensitive data and assess re-identification risk through controlled workflows before it is shared, analyzed, or distributed.",
+        "serviceName": "Anonymix"
       },
       "CLEVER": {
         "title": "Clever",
         "description": "Visualize and analyze data",
-        "detail": "Explore and monitor data through interactive visualization tools."
+        "detail": "Explore and monitor data through interactive visualization tools.",
+        "serviceName": "Clever"
       }
     }
   }

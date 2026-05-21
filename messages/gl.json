@@ -75,12 +75,14 @@
       "ANONYMIX": {
         "title": "Anonymix",
         "description": "Asegurar a privacidade de conxuntos de datos sensibles",
-        "detail": "Anonimice datos sensibles e avalíe o risco de reidentificación mediante fluxos de traballo controlados antes de compartilos, analizalos ou distribuílos."
+        "detail": "Anonimice datos sensibles e avalíe o risco de reidentificación mediante fluxos de traballo controlados antes de compartilos, analizalos ou distribuílos.",
+        "serviceName": "Anonymix"
       },
       "CLEVER": {
         "title": "Clever",
         "description": "Visualizar e analizar datos",
-        "detail": "Explore e monitorice datos mediante ferramentas de visualización interactivas."
+        "detail": "Explore e monitorice datos mediante ferramentas de visualización interactivas.",
+        "serviceName": "Clever"
       }
     }
   }

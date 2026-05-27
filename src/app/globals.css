@@ -325,7 +325,7 @@ p {
   min-height: calc(100vh - clamp(2rem, 4.8vw, 4rem));
   margin: 0 auto;
   display: grid;
-  align-content: center;
+  align-content: start;
   gap: clamp(0.85rem, 1.7vw, 1.2rem);
   
 }
@@ -805,6 +805,8 @@ p {
   .detail-panel p {
     font-size: clamp(0.85rem, 1.6vw, 1rem);
   }
+
+  
 }
 @media (max-width: 750px) {
 
@@ -1148,7 +1150,11 @@ p {
   .node-text strong {
   font-size: clamp(0.55rem, 2vw, 0.7rem);
   line-height: 1;
+  
 }
+.footer-section {
+    margin-top: 1px;
+  }
 
 .service-node-center .node-text strong {
   font-size: clamp(0.65rem, 2.2vw, 0.8rem);

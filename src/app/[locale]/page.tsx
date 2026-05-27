@@ -115,10 +115,7 @@ export default function Home() {
   const t = useTranslations("dashboard");
   const locale = useLocale() as Locale;
   const [selectedKey, setSelectedKey] = useState<CapabilityKey | null>(null);
- const [menuCollapsed, setMenuCollapsed] = useState<boolean>(() => {
-  if (typeof window === "undefined") return false;
-  return localStorage.getItem("menuCollapsed") === "true";
-});
+const [menuCollapsed, setMenuCollapsed] = useState(true);
 useEffect(() => {
   localStorage.setItem("menuCollapsed", String(menuCollapsed));
 }, [menuCollapsed]);
@@ -155,21 +152,21 @@ useEffect(() => {
     .map((key) => capabilities.find((capability) => capability.key === key))
     .filter((capability): capability is Capability => Boolean(capability));
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 900px)");
+ useEffect(() => {
+  const mediaQuery = window.matchMedia("(max-width: 900px)");
 
-    function syncMenuState() {
-      if (mediaQuery.matches) {
-        setMenuCollapsed(true);
-      }
+  const syncMenuState = () => {
+    if (mediaQuery.matches) {
+      setMenuCollapsed(true);
     }
+  };
 
-    mediaQuery.addEventListener("change", syncMenuState);
+  syncMenuState(); // solo después de mount
 
-    return () => {
-      mediaQuery.removeEventListener("change", syncMenuState);
-    };
-  }, []);
+  mediaQuery.addEventListener("change", syncMenuState);
+
+  return () => mediaQuery.removeEventListener("change", syncMenuState);
+}, []);
 
   function handleSelect(key: CapabilityKey) {
     const nextSelectedKey = selectedKey === key ? null : key;

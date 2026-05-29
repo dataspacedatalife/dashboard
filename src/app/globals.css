@@ -1103,6 +1103,9 @@ p {
   .dashboard-shell[data-menu-collapsed="true"] .side-menu {
     transform: translateX(-110%);
   }
+  .side-menu-brand{
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 450px) {

@@ -970,7 +970,7 @@ p {
   }
 }
 .footer-section {
-  margin-top: 5rem;
+  margin-top: 0px;
   border-top: 1px solid var(--line);
   background:
     linear-gradient(

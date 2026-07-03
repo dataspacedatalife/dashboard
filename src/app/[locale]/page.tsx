@@ -78,7 +78,7 @@ const capabilityDefinitions: CapabilityDefinition[] = [
   },
   {
     key: "DELIVER",
-    url: "https://cloud.dataspace.cesga.es",
+    url: "http://cloud.srv.cesga.es/",
     accent: "#2f8d24",
     Icon: CloudUpload,
     position: "right",

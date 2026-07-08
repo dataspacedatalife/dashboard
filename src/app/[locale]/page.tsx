@@ -199,7 +199,11 @@ return (
 
     <aside className="side-menu" aria-label={t("aria.mainMenu")}>
 
-      <div className="side-menu-brand" aria-label={t("brand")}>
+      <a
+        className="side-menu-brand"
+        aria-label={t("brand")}
+        href={`https://dataspace.cesga.es/${locale}`}
+      >
         <Image
           src="/logo.png"
           alt={t("logoAlt")}
@@ -218,7 +222,7 @@ return (
           unoptimized
           className="side-menu-logo-mark"
         />
-      </div>
+      </a>
 
       <div className="side-menu-header">
         <Menu size={20} aria-hidden="true" />

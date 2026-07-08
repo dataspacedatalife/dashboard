@@ -61,19 +61,20 @@ p {
 }
 
 .dashboard-shell {
+  --menu-width: 16rem;
   min-height: 100vh;
   padding: clamp(1rem, 2.4vw, 2rem);
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: var(--menu-width) minmax(0, 1fr);
   gap: clamp(1rem, 2vw, 1.5rem);
   align-items: start;
 }
 
 .side-menu {
-  --menu-width: 16rem;
-  grid-column: 1;
-  position: sticky;
-  top: clamp(1rem, 2.4vw, 2rem);
+  position: fixed;
+  top: 50%;
+  left: clamp(1rem, 2.4vw, 2rem);
+  transform: translateY(-50%);
   width: var(--menu-width);
   max-height: calc(100vh - clamp(2rem, 4.8vw, 4rem));
   border: 1px solid var(--line);
@@ -285,7 +286,7 @@ p {
   white-space: nowrap;
 }
 
-.dashboard-shell[data-menu-collapsed="true"] .side-menu {
+.dashboard-shell[data-menu-collapsed="true"] {
   --menu-width: 4.55rem;
 }
 

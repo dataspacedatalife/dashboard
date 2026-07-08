@@ -742,6 +742,11 @@ p {
   transform: translateY(-0.08rem);
 }
 @media (max-width: 1040px) {
+  .side-menu {
+    align-self: start;
+    margin-top: calc(clamp(0.75rem, 2vw, 1.5rem) - clamp(1rem, 2.4vw, 2rem));
+  }
+
   .dashboard-page {
     align-content: start;
     padding-top: 3.5rem;

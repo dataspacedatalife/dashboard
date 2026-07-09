@@ -115,7 +115,7 @@ export default function Home() {
   const t = useTranslations("dashboard");
   const locale = useLocale() as Locale;
   const [selectedKey, setSelectedKey] = useState<CapabilityKey | null>(null);
-const [menuCollapsed, setMenuCollapsed] = useState(true);
+const [menuCollapsed, setMenuCollapsed] = useState(false);
 useEffect(() => {
   localStorage.setItem("menuCollapsed", String(menuCollapsed));
 }, [menuCollapsed]);

@@ -2,9 +2,15 @@
 
 set -euo pipefail
 
-git pull origin main --rebase
+git fetch origin
+git reset --hard origin/devel
+git clean -fd
 
-docker build . -t dashboard:latest
-docker stop dashboard || true
-docker rm dashboard || true
-docker run -d --name dashboard -p 4000:3000 --restart unless-stopped dashboard:latest
+docker build . -t dashboard:devel
+docker stop dashboard-devel || true
+docker rm dashboard-devel || true
+docker run -d \
+  --name dashboard-devel \
+  -p 4001:3000 \
+  --restart unless-stopped \
+  dashboard:devel

@@ -72,9 +72,11 @@ p {
 
 .side-menu {
   grid-column: 1;
-  align-self: center;
+  align-self: start;
+  margin-top: calc(clamp(0.75rem, 2vw, 1.5rem) - clamp(1rem, 2.4vw, 2rem));
   width: var(--menu-width);
-  max-height: calc(100vh - clamp(2rem, 4.8vw, 4rem));
+  height: calc(100vh - 2 * clamp(0.75rem, 2vw, 1.5rem));
+  overflow-y: auto;
   border: 1px solid var(--line);
   border-radius: 0.55rem;
   background: rgba(255, 255, 255, 0.94);
@@ -778,11 +780,6 @@ p {
 }
 
 @media (max-width: 1040px) {
-  .side-menu {
-    align-self: start;
-    margin-top: calc(clamp(0.75rem, 2vw, 1.5rem) - clamp(1rem, 2.4vw, 2rem));
-  }
-
   .dashboard-page {
     align-content: start;
     padding-top: 3.5rem;

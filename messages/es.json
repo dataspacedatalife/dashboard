@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Panel de OneHealth DataSpace",
-    "description": "Panel operativo del ciclo de vida para los servicios de OneHealth DataSpace."
+    "description": "Panel operativo del ciclo de vida para los servicios de OneHealth DataSpace"
   },
   "dashboard": {
     "brand": "OneHealth DataSpace",
@@ -38,50 +38,50 @@
       "service": "Servicio",
       "local": "Local",
       "openService": "Abrir servicio {service}",
-      "localNote": "Esta opción se muestra localmente en la interfaz del conector EDC.",
-      "emptyPrompt": "Seleccione un servicio para ver su función en el ciclo de vida y acceder a su punto operativo."
+      "localNote": "Esta opción se muestra localmente en la interfaz del conector EDC",
+      "emptyPrompt": "Seleccione un servicio para ver su función en el ciclo de vida y acceder a su punto operativo"
     },
     "capabilities": {
       "SHARE": {
         "title": "Compartir",
         "description": "Compartir datos de forma segura con otros participantes",
-        "detail": "Intercambie datos de One Health con otros participantes del espacio de datos de forma interoperable y confiable mediante conectores EDC.",
+        "detail": "Intercambie datos de One Health con otros participantes del espacio de datos de forma interoperable y confiable mediante conectores EDC",
         "serviceName": "conector EDC"
       },
       "COMPUTE": {
         "title": "Computar",
         "description": "Usar capacidades avanzadas de computación",
-        "detail": "Ejecute flujos de trabajo de HPC a través de un entorno interactivo.",
+        "detail": "Ejecute flujos de trabajo de HPC a través de un entorno interactivo",
         "serviceName": "HPC"
       },
       "ANALYZE": {
         "title": "Analizar",
         "description": "Convertir datos en conocimiento",
-        "detail": "Explore y analice conjuntos grandes de datos para transformarlos en conocimiento útil mediante tecnologías Big Data.",
+        "detail": "Explore y analice conjuntos grandes de datos para transformarlos en conocimiento útil mediante tecnologías Big Data",
         "serviceName": "Big Data"
       },
       "STORE": {
         "title": "Almacenar",
         "description": "Almacenar activos de datos",
-        "detail": "Guarde los datos originales, resultados derivados y otros datos de proyecto en almacenamiento accesible y de alto rendimiento.",
+        "detail": "Guarde los datos originales, resultados derivados y otros datos de proyecto en almacenamiento accesible y de alto rendimiento",
         "serviceName": "Storage"
       },
       "DELIVER": {
         "title": "Exponer",
         "description": "Exponer resultados como servicios y aplicaciones",
-        "detail": "Publique aplicaciones y endpoints de servicios a través de servicios cloud bajo su control.",
+        "detail": "Publique aplicaciones y endpoints de servicios a través de servicios cloud bajo su control",
         "serviceName": "Cloud"
       },
       "ANONYMIX": {
         "title": "Anonymix",
         "description": "Asegurar la privacidad de conjuntos de datos sensibles",
-        "detail": "Anonimice datos sensibles y evalúe el riesgo de reidentificación mediante flujos de trabajo controlados antes de compartirlos, analizarlos o distribuirlos.",
+        "detail": "Anonimice datos sensibles y evalúe el riesgo de reidentificación mediante flujos de trabajo controlados antes de compartirlos, analizarlos o distribuirlos",
         "serviceName": "Anonymix"
       },
       "CLEVER": {
         "title": "Clever",
         "description": "Visualizar y analizar datos",
-        "detail": "Explore y monitorice datos mediante herramientas de visualización interactivas.",
+        "detail": "Explore y monitorice datos mediante herramientas de visualización interactivas",
         "serviceName": "Clever"
       }
     }

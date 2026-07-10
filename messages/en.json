@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "OneHealth DataSpace Dashboard",
-    "description": "Operational lifecycle dashboard for OneHealth DataSpace services."
+    "description": "Operational lifecycle dashboard for OneHealth DataSpace services"
   },
   "dashboard": {
     "brand": "OneHealth DataSpace",
@@ -38,50 +38,50 @@
       "service": "Service",
       "local": "Local",
       "openService": "Open {service} Service",
-      "localNote": "This option is shown locally in the dashboard.",
-      "emptyPrompt": "Select a service to explore its role in the lifecycle and access its operational endpoint."
+      "localNote": "This option is shown locally in the dashboard",
+      "emptyPrompt": "Select a service to explore its role in the lifecycle and access its operational endpoint"
     },
     "capabilities": {
       "SHARE": {
         "title": "Share",
         "description": "Securely share data with other participants",
-        "detail": "Exchange One Health data with other Data Space participants in an interoperable and trusted way using EDC connectors.",
+        "detail": "Exchange One Health data with other Data Space participants in an interoperable and trusted way using EDC connectors",
         "serviceName": "EDC connector"
       },
       "COMPUTE": {
         "title": "Compute",
         "description": "Use advanced computing capabilities",
-        "detail": "Launch HPC workloads through an interactive environment.",
+        "detail": "Launch HPC workloads through an interactive environment",
         "serviceName": "HPC"
       },
       "ANALYZE": {
         "title": "Analyze",
         "description": "Turn data into knowledge",
-        "detail": "Explore and analyze large datasets to transform them into useful insights using Big Data technologies.",
+        "detail": "Explore and analyze large datasets to transform them into useful insights using Big Data technologies",
         "serviceName": "Big Data"
       },
       "STORE": {
         "title": "Store",
         "description": "Store your data assets",
-        "detail": "Keep your source data, derived outputs, and other project data in accesible, high-performance storage.",
+        "detail": "Keep your source data, derived outputs, and other project data in accesible, high-performance storage",
         "serviceName": "Storage"
       },
       "DELIVER": {
         "title": "Deliver",
         "description": "Expose results as services and applications",
-        "detail": "Publish applications and service endpoints through cloud services under your control.",
+        "detail": "Publish applications and service endpoints through cloud services under your control",
         "serviceName": "Cloud"
       },
       "ANONYMIX": {
         "title": "Anonymix",
         "description": "Ensure privacy for sensitive datasets",
-        "detail": "Anonymize sensitive data and assess re-identification risk through controlled workflows before it is shared, analyzed, or distributed.",
+        "detail": "Anonymize sensitive data and assess re-identification risk through controlled workflows before it is shared, analyzed, or distributed",
         "serviceName": "Anonymix"
       },
       "CLEVER": {
         "title": "Clever",
         "description": "Visualize and analyze data",
-        "detail": "Explore and monitor data through interactive visualization tools.",
+        "detail": "Explore and monitor data through interactive visualization tools",
         "serviceName": "Clever"
       }
     }

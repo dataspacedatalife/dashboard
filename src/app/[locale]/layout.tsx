@@ -23,7 +23,11 @@ export async function generateMetadata({
   const safeLocale = hasLocale(routing.locales, locale)
     ? (locale as Locale)
     : routing.defaultLocale;
-  const t = await getTranslations({ locale: safeLocale, namespace: "metadata" });
+
+  const t = await getTranslations({
+    locale: safeLocale,
+    namespace: "metadata",
+  });
 
   return {
     title: t("title"),
@@ -45,13 +49,49 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
+
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
-      <body>
+      <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
+
+          <footer className="footer-section">
+            <div className="footer-container">
+              
+
+              <div className="footer-logos">
+                <div className="footer-logo-card">
+                  <img src="/funding/financiado_union_europea.png" alt="Financiado por la Unión Europea" />
+                </div>
+
+                <div className="footer-logo-card">
+                  <img src="/funding/ministerio_tranformacion_digital.jpg" alt="Ministerio para la transformación digital y de la función pública" />
+                </div>
+
+                <div className="footer-logo-card">
+                  <img src="/funding/logo_prtr.png" alt="Plan de Recuperación, Transformación y Resiliencia" />
+                </div>
+
+                <div className="footer-logo-card">
+                  <img src="/funding/logo_cesga.png" alt="CESGA" />
+                </div>
+
+                <div className="footer-logo-card">
+                  <img src="/funding/logo_xacobeo.png" alt="Xacobeo 2027" />
+                </div>
+              </div>
+
+              <div className="footer-bottom">
+                © 2026 OneHealth DataSpace
+              </div>
+
+            </div>
+          </footer>
         </NextIntlClientProvider>
       </body>
     </html>
